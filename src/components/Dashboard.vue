@@ -10,7 +10,6 @@ import {Container, WebGLRenderer, Sprite, Graphics, Filter, Matrix} from './../a
 
 export default {
   props: {
-    'productId': Number
   },
   data: () => {
     return {
