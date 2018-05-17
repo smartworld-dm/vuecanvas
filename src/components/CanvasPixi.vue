@@ -44,8 +44,10 @@ export default {
       let renderer = new PIXI.WebGLRenderer(cvs.width, cvs.height, {backgroundColor : 0xffffff, view: cvs, antialias: true} )
       let container = new PIXI.Container()
       let img = new Image()
-      img.src = "./../assets/images/" + imgID + ".png";
+      img.src = "public/images/" + imgID + ".png"
+      console.log(img.src)
       img.onload = function(){
+        var a  = new PIXI.BaseTexture(img)
         let sprite = new PIXI.Sprite(new PIXI.Texture(new PIXI.BaseTexture(img)))
         sprite.width = cvs.width
         sprite.height = cvs.height

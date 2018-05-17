@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <my-canvas-pixi></my-canvas-pixi>
     <h2>Bar Chart Example</h2>
     <!-- These are the custom components we'll create -->
     <!-- Values for `my-box` are percentages of the width of the canvas. -->
@@ -16,7 +17,6 @@
       >
       </my-box>
     </my-canvas>
-    <my-canvas-pixi></my-canvas-pixi>
   </div>
 </template>
 
@@ -57,7 +57,7 @@ export default {
       if (Math.random() > 0.99) selectedVal = Math.floor(Math.random() * this.chartValues.length);
 
       this.chartValues[selectedVal].val = Math.min(Math.max(this.chartValues[selectedVal].val + dir * 0.5, 0), 100);
-    }, 16);
+    }, 1600);
   }
 }
 </script>
